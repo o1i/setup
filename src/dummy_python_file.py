@@ -5,3 +5,8 @@
 def dummy_function(arg):  # noqa: ARG001 pylint: disable=W0613
     """Do something now."""
     return 1
+
+
+def dummy_function_2():
+    """Do something else."""
+    return 2
