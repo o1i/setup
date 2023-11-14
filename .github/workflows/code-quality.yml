@@ -1,0 +1,23 @@
+name: check-code-quality
+run-name: ${{ github.actor }} is checking code quality
+on: [ pull_request ]
+jobs:
+  check-code:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '^3.12'
+          architecture: 'x64'
+      - name: Install poetry
+        run: |
+          curl -sSL https://install.python-poetry.org | python3 -
+          export PATH=$PATH:$HOME/.local/bin
+      - name: Install requirements
+        run: poetry install
+      - name: Ruff check
+        run: poetry run ruff check src
+      - name: Pylint check
+        run: poetry run pylint src
