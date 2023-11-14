@@ -19,3 +19,4 @@ repos:
             "-rn", # Only display messages
             "-sn", # Don't display the score
           ]
+fail_fast: false
