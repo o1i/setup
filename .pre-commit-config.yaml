@@ -3,10 +3,10 @@ repos:
     # Ruff version.
     rev: v0.1.5
     hooks:
-      # Run the linter.
-      - id: ruff
       # Run the formatter.
       - id: ruff-format
+      # Run the linter.
+      - id: ruff
   - repo: local
     hooks:
       - id: pylint
