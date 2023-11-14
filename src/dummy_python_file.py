@@ -7,6 +7,6 @@ def dummy_function(arg):  # noqa: ARG001 pylint: disable=W0613
     return 1
 
 
-def dummy_function_2():
+def dummy_function_3():
     """Do something else."""
     return 2
