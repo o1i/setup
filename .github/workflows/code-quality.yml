@@ -18,6 +18,6 @@ jobs:
       - name: Install requirements
         run: poetry install
       - name: Ruff check
-        run: poetry run ruff check ./**/*.py
+        run: poetry run ruff check src
       - name: Pylint check
-        run: poetry run pylint ./**/*.py
+        run: poetry run pylint src
